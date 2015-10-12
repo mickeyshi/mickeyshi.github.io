@@ -1,0 +1,185 @@
+/*Table of Contents
+________________________
+-General Contents
+-Typography
+-Header and Navigation
+-Images and Media
+-Footer
+-Media Queries
+
+
+
+
+
+
+________________________*/
+
+/* General Content
+_______________________________________________________*/
+.main{padding-top:3%;}
+.row{padding:2% 0;}
+.row.portheader{padding:0% 0;}
+.grey{
+  background-color: rgba(144, 144, 144, .5);
+}
+.blue{
+  background-color: rgb(42, 57, 111);
+}
+.red{
+  background-color: rgba(162,43,44, .75);
+}
+
+
+body{
+	background-image:url("paperbg.jpg");
+	background-size: 1600px;
+}
+/*Typography
+_______________________________________________________*/
+body{
+	font-family:'Source Sans Pro', sans-serif;
+	font-size: 1.5em;
+	color: #558d93;
+}
+header{
+
+}
+
+h2{
+	font-size: 3em;
+	margin: .067em;
+	color: #ddf4ff;
+	
+}
+h3{
+	font-size: 1.8em;
+	word-spacing: 1.75em;
+}
+h2.bio{
+}
+p{
+	font-family: 'Droid Sans',sans-serif;
+}
+ul {
+    display: block;
+    list-style-type: none;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+} 
+/* Header and Navigation
+_______________________________________________________*/
+header.main_nav{
+	padding: 1% 0;
+	display:block;
+	
+}
+h3.link_banner{
+	
+	margin-top:1.5em;
+	text-align:right ;
+	
+}
+a{
+	text-decoration:none;
+}
+
+.logo{
+	margin: 5% auto;
+	text-align:left;
+}
+.logo a{
+	font-weight:bold;
+	color: #2a396f;
+	border: 3px solid #2a396f;
+	text-transform:uppercase;
+	padding:  0 10px ;
+	margin: 0;
+}
+.link_banner a{
+	font-family:'Source Sans Pro', sans-serif;
+	font-size: 1em;
+	color: #558d93;
+	
+}
+.logo a:hover{
+	background-color:  #2a396f;
+	color: #fff;
+}
+
+
+/* Images and Media
+_______________________________________________________*/
+img{
+	max-width:100%;
+}
+img.smallsquare{
+	padding-bottom:1.4em;
+}
+img.avatar{
+	border: 4px solid #ddf4ff;
+}
+img:hover{opacity:0.8}
+
+
+/* Footer
+_______________________________________________________*/
+ul.social{
+	display:block;
+	margin: 5%, 0;
+	list-style-type:none;
+	text-align: center
+}
+ul.social li{
+	font-size: 1.3em;
+	display: inline;
+	padding: 0 2%;
+}
+
+ul.social a{
+	color: #2a396f
+}
+ul.social li.facebook a:hover{
+	color: rgb(59, 89, 152);
+}
+ul.social li.twitter a:hover{
+	color: rgb(0, 172, 237);
+}
+ul.social li.instagram a:hover{
+	color: rgb(81, 127, 237);
+}
+ul.social li.youtube a:hover{
+	color: rgb(187, 0, 0);
+}
+ul.social li.flickr a:hover{
+	color: rgb(255, 0, 182);
+}
+ul.social li.linkedin a:hover{
+	color: rgb(0, 123, 182);
+}
+
+p.copyright{
+	text-align:center;
+	color: #bbbbbb;
+	font-size: 1em;
+}
+
+/* Media Queries
+_______________________________________________________*/
+
+@media (max-width: 775px) {
+	.logo a{
+	border: 0
+	}
+	img.avatar{margin-top: 15%;}
+	
+}
+@media (max-width: 479px) {
+	.link_banner a{ font-size:.8em;}
+	p.bio{font-size:1.25em;}
+	h3{
+		word-spacing: 1em;
+	}
+}
+}
