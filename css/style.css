@@ -61,6 +61,7 @@ p{
 	font-family: 'Droid Sans',sans-serif;
 }
 ul {
+	color: #ffffff;
     display: block;
     list-style-type: none;
     margin-bottom: 1 em;
