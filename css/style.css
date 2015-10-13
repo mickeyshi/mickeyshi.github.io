@@ -159,6 +159,9 @@ ul.social li.flickr a:hover{
 ul.social li.linkedin a:hover{
 	color: rgb(0, 123, 182);
 }
+ul.social li.github a:hover{
+	color: #333;
+}
 
 p.copyright{
 	text-align:center;
