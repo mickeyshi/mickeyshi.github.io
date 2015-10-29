@@ -1,0 +1,3 @@
+#insert loader names in which you want the objects to be ordered in at the end of the list
+#if objects have different loader names but same class such as PhysicsBox and PhysicsCircle (which derives from PhysicsObject), even if only PhysicsBox is listed here PhysicsCircle will also be ordered the same
+

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <Py_Library>$(SolutionDir)SDL 2.0\py34_lib\$(PlatformTarget)\</Py_Library>
+    <Py_Include>$(SolutionDir)SDL 2.0\py34_include</Py_Include>
+    <SDL_Include>$(SolutionDir)SDL 2.0\_include</SDL_Include>
+    <SDL_Library>$(SolutionDir)SDL 2.0\_lib\$(PlatformTarget)\</SDL_Library>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(Py_Include);$(SDL_Include);$(IncludePath)</IncludePath>
+    <LibraryPath>$(Py_Library);$(SDL_Library);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <OpenMPSupport>true</OpenMPSupport>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;SDL2_net.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>1&gt;NUL copy /Y /B "$(SDL_Library)libFLAC-8.dll" "$(ProjectDir)libFLAC-8.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)libfreetype-6.dll" "$(ProjectDir)libfreetype-6.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)libjpeg-9.dll" "$(ProjectDir)libjpeg-9.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)libmikmod-2.dll" "$(ProjectDir)libmikmod-2.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)libmodplug-1.dll" "$(ProjectDir)libmodplug-1.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)libogg-0.dll" "$(ProjectDir)libogg-0.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)libpng16-16.dll" "$(ProjectDir)libpng16-16.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)libtiff-5.dll" "$(ProjectDir)libtiff-5.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)libvorbis-0.dll" "$(ProjectDir)libvorbis-0.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)libvorbisfile-3.dll" "$(ProjectDir)libvorbisfile-3.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)libwebp-4.dll" "$(ProjectDir)libwebp-4.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)SDL2.dll" "$(ProjectDir)SDL2.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)SDL2_image.dll" "$(ProjectDir)SDL2_image.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)SDL2_mixer.dll" "$(ProjectDir)SDL2_mixer.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)SDL2_net.dll" "$(ProjectDir)SDL2_net.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)SDL2_ttf.dll" "$(ProjectDir)SDL2_ttf.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)smpeg2.dll" "$(ProjectDir)smpeg2.dll"
+1&gt;NUL copy /Y /B "$(SDL_Library)zlib1.dll" "$(ProjectDir)zlib1.dll"
+
+1&gt;NUL copy /Y /B "$(Py_Library)python3.dll" "$(ProjectDir)python3.dll"
+1&gt;NUL copy /Y /B "$(Py_Library)python34.dll" "$(ProjectDir)python34.dll"
+
+1&gt;NUL 2&gt;NUL copy /Y /B "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\msvcr$(PlatformToolsetVersion).dll" "$(ProjectDir)msvcr$(PlatformToolsetVersion).dll"
+1&gt;NUL 2&gt;NUL copy /Y /B "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\vcruntime$(PlatformToolsetVersion).dll" "$(ProjectDir)vcruntime$(PlatformToolsetVersion).dll"
+1&gt;NUL copy /Y /B "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\msvcp$(PlatformToolsetVersion).dll" "$(ProjectDir)msvcp$(PlatformToolsetVersion).dll"
+1&gt;NUL copy /Y /B "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).OpenMP\vcomp$(PlatformToolsetVersion).dll" "$(ProjectDir)vcomp$(PlatformToolsetVersion).dll"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="Py_Library">
+      <Value>$(Py_Library)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="Py_Include">
+      <Value>$(Py_Include)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="SDL_Include">
+      <Value>$(SDL_Include)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="SDL_Library">
+      <Value>$(SDL_Library)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
